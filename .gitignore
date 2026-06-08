@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Claude Code local (machine-specific, not shared)
+.claude/settings.local.json
+
+# Env / secrets
+.env
+secrets/
+
+# OS
+.DS_Store
+Thumbs.db

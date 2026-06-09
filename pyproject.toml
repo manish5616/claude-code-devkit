@@ -17,4 +17,5 @@ select = ["E", "F", "I", "UP", "B"]  # errors, pyflakes, import-sort, pyupgrade,
 
 [tool.pytest.ini_options]
 testpaths = ["mcp/repo-archaeologist/tests"]
+pythonpath = ["mcp/repo-archaeologist"]
 addopts = "-q"

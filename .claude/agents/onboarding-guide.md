@@ -4,7 +4,7 @@ description: >
   Explores a codebase and produces a structured onboarding guide for a new
   developer. Use when the user asks to "onboard", "understand this repo",
   "write an onboarding doc", or "explain how this project is organized".
-tools: Read, Grep, Glob, Bash(git log:*), Bash(git ls-files:*)
+tools: Read, Grep, Glob, Bash(git log:*), Bash(git ls-files:*), mcp__repo-archaeologist__list_symbols, mcp__repo-archaeologist__summarize_module, mcp__repo-archaeologist__git_blame_story
 model: inherit
 ---
 
@@ -14,8 +14,11 @@ never modify files.
 
 Process:
 1. Survey structure with `git ls-files` (fall back to Glob if not a git repo).
-2. Identify entry points, config, and the most-referenced modules (use Grep).
-3. Read only the files that matter most — do not read everything.
+2. For Python repos, use the `repo-archaeologist` MCP tools for ground-truth facts:
+   `list_symbols` for the symbol inventory, `summarize_module` on key files, and
+   `git_blame_story` to see which files are most actively maintained.
+3. Identify entry points, config, and the most-referenced modules (use Grep).
+4. Read only the files that matter most — do not read everything.
 
 Produce an onboarding guide with these sections:
 - **TL;DR** — what the project is and does, in 3 sentences.

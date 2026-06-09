@@ -1,7 +1,7 @@
 ---
 description: Generate an architecture overview of the current repository
 argument-hint: "[subdirectory to focus on, optional]"
-allowed-tools: Bash(git ls-files:*), Bash(git rev-parse:*), Bash(find:*), Read
+allowed-tools: Bash(git ls-files:*), Bash(git rev-parse:*), Bash(find:*), Read, mcp__repo-archaeologist__list_symbols, mcp__repo-archaeologist__summarize_module
 ---
 
 You are mapping a codebase to produce a concise **architecture overview**.
@@ -15,6 +15,11 @@ Focus area (optional): $ARGUMENTS
 
 If the file list above is empty or shows an error, tell the user this command must
 be run from inside the project directory and stop.
+
+For Python repos, prefer FACTS over guessing: call the `repo-archaeologist`
+MCP tools — `list_symbols` (pass the working directory above as `path`) to inventory
+functions/classes, and `summarize_module` on the most important files. Use their
+output as ground truth, then write the prose overview below.
 
 Using the file list above (and reading key files as needed), produce:
 

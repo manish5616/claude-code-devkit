@@ -14,6 +14,13 @@ architecture overviews and onboarding guides.
 
 ---
 
+## Demo
+
+![devkit demo — /map-repo producing an architecture overview](./docs/demo.png)
+
+> `/map-repo` running in Claude Code: it calls the Repo Archaeologist MCP tools,
+> then writes an architecture overview from the returned facts.
+
 ## What it does
 
 Installing this plugin gives Claude Code five new capabilities:

@@ -1,27 +1,24 @@
 ---
 description: Generate an architecture overview of the current repository
 argument-hint: "[subdirectory to focus on, optional]"
-allowed-tools: Bash(git ls-files:*), Bash(git rev-parse:*), Bash(find:*), Read, mcp__repo-archaeologist__list_symbols, mcp__repo-archaeologist__summarize_module
+allowed-tools: Glob, Read, mcp__repo-archaeologist__list_symbols, mcp__repo-archaeologist__summarize_module
 ---
 
-You are mapping a codebase to produce a concise **architecture overview**.
-
-Working directory: !`pwd`
-
-Repository file list (git-tracked files, or a fallback listing if not a git repo):
-!`git ls-files 2>/dev/null || find . -type f -not -path '*/.*' | head -200`
+Produce a concise **architecture overview** of the repository in the current
+working directory.
 
 Focus area (optional): $ARGUMENTS
 
-If the file list above is empty or shows an error, tell the user this command must
-be run from inside the project directory and stop.
+How to gather the facts (do this quietly — do not narrate these steps):
 
-For Python repos, prefer FACTS over guessing: call the `repo-archaeologist`
-MCP tools — `list_symbols` (pass the working directory above as `path`) to inventory
-functions/classes, and `summarize_module` on the most important files. Use their
-output as ground truth, then write the prose overview below.
+1. Use `Glob` (e.g. `**/*.py`, plus top-level config files) to see the layout.
+2. For Python repos, call the `repo-archaeologist` MCP tools as ground truth:
+   - `list_symbols` with `path` set to the repository's absolute root, to inventory
+     functions/classes.
+   - `summarize_module` on the 3-5 most important files.
+3. Read key config files (pyproject.toml, package.json, README) only as needed.
 
-Using the file list above (and reading key files as needed), produce:
+Then write the overview from those facts:
 
 1. **Purpose** — what this project is, in 2-3 sentences.
 2. **Structure** — the main directories and what each is responsible for.
@@ -29,4 +26,5 @@ Using the file list above (and reading key files as needed), produce:
 4. **Key modules** — the 3-5 most important files and their roles.
 5. **How to run / test** — inferred from config files.
 
-Keep it tight and skimmable. Prefer a new reader's perspective (onboarding).
+Keep it tight and skimmable, written for a new reader. Output **only** the overview —
+do not describe your tool calls or working directory.

@@ -4,7 +4,7 @@
 > Python repository through a custom MCP server, a sub-agent, a slash command,
 > a skill, and safety hooks.
 
-![tests](https://github.com/YOUR_GITHUB_USERNAME/claude-code-devkit/actions/workflows/tests.yml/badge.svg)
+![tests](https://github.com/manish5616/claude-code-devkit/actions/workflows/tests.yml/badge.svg)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
 The centerpiece is **Repo Archaeologist**, a standalone Python **MCP server** that
@@ -56,7 +56,7 @@ python -m pip install mcp
 Then add the marketplace and install the plugin:
 
 ```bash
-claude plugin marketplace add YOUR_GITHUB_USERNAME/claude-code-devkit
+claude plugin marketplace add manish5616/claude-code-devkit
 claude plugin install devkit@devkit-marketplace
 ```
 
@@ -72,10 +72,17 @@ Restart Claude Code. Verify with `claude mcp list` (look for
 "Onboard me to this repository" # delegates to the onboarding-guide sub-agent
 ```
 
+## Worked example
+
+See **[`docs/example-click.md`](./docs/example-click.md)** — the Repo Archaeologist
+tools pointed at [`pallets/click`](https://github.com/pallets/click): the real tool
+output (591 symbols, the `core.py` class model, git history) plus the architecture
+overview generated from those facts.
+
 ## Development
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/claude-code-devkit
+git clone https://github.com/manish5616/claude-code-devkit
 cd claude-code-devkit
 python -m venv .venv
 ./.venv/Scripts/python.exe -m pip install -e ".[dev]"   # Windows

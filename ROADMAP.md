@@ -282,5 +282,5 @@ the generated architecture doc.
 | 7 | MCP: Using | ✅ |
 | 8 | MCP: Building ⭐ | ✅ |
 | 9 | Plugins & Marketplace | ✅ |
-| 10 | Headless / SDK / CI | ◐ (CI workflow added) |
-| 11 | Capstone & Publishing | ⏳ in progress |
+| 10 | Headless / SDK / CI | ◐ CI built; headless & SDK are learn-only |
+| 11 | Capstone & Publishing | ✅ |

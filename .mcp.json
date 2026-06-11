@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "repo-archaeologist": {
+      "command": "python",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/repo-archaeologist/server.py"]
+    }
+  }
+}

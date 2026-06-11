@@ -17,11 +17,11 @@ the prose.
 1. Run the bundled helper to get the module's structure as JSON:
 
    ```
-   python "$CLAUDE_PROJECT_DIR/.claude/skills/module-summary/scripts/extract_structure.py" <path-to-file.py>
+   python "${CLAUDE_PLUGIN_ROOT}/skills/module-summary/scripts/extract_structure.py" <path-to-file.py>
    ```
 
-   (When this skill ships inside the installed plugin, the script lives at
-   `$CLAUDE_PLUGIN_ROOT/skills/module-summary/scripts/extract_structure.py`.)
+   (`${CLAUDE_PLUGIN_ROOT}` is set by Claude Code to this plugin's install
+   directory, so the path resolves wherever the plugin is installed.)
 
 2. The helper returns: `module_docstring`, `imports`, `classes` (with methods and
    docstrings), and `functions` (with args and docstrings). Treat this as ground

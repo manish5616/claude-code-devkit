@@ -1,0 +1,10 @@
+{
+  "name": "devkit",
+  "version": "0.1.0",
+  "description": "Repo Archaeologist — codebase-archaeology toolkit for Claude Code: a Python MCP server (find_symbol, summarize_module, git_blame_story, ...), a /map-repo command, an onboarding-guide subagent, a module-summary skill, and safety hooks.",
+  "author": {
+    "name": "Manish Kumar"
+  },
+  "keywords": ["mcp", "code-analysis", "onboarding", "ast", "git"],
+  "license": "MIT"
+}

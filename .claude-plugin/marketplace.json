@@ -1,0 +1,13 @@
+{
+  "name": "devkit-marketplace",
+  "owner": {
+    "name": "Manish Kumar"
+  },
+  "plugins": [
+    {
+      "name": "devkit",
+      "source": "./",
+      "description": "Repo Archaeologist codebase-archaeology toolkit (MCP server + command + subagent + skill + hooks)."
+    }
+  ]
+}

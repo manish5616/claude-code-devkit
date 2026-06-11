@@ -8,9 +8,8 @@ Run as a stdio MCP server:  python server.py
 """
 from __future__ import annotations
 
-from mcp.server.fastmcp import FastMCP
-
 from analyzers import history, modules, symbols
+from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("repo-archaeologist")
 

@@ -272,15 +272,15 @@ the generated architecture doc.
 
 | Phase | Topic | Status |
 |------:|-------|:------:|
-| 0 | Foundations | ☐ |
-| 1 | Context & Memory | ☐ |
-| 2 | Config & Permissions | ☐ |
-| 3 | Slash Commands | ☐ |
-| 4 | Hooks | ☐ |
-| 5 | Subagents | ☐ |
-| 6 | Skills | ☐ |
-| 7 | MCP: Using | ☐ |
-| 8 | MCP: Building ⭐ | ☐ |
-| 9 | Plugins & Marketplace | ☐ |
-| 10 | Headless / SDK / CI | ☐ |
-| 11 | Capstone & Publishing | ☐ |
+| 0 | Foundations | ✅ |
+| 1 | Context & Memory | ✅ |
+| 2 | Config & Permissions | ✅ |
+| 3 | Slash Commands | ✅ |
+| 4 | Hooks | ✅ |
+| 5 | Subagents | ✅ |
+| 6 | Skills | ✅ |
+| 7 | MCP: Using | ✅ |
+| 8 | MCP: Building ⭐ | ✅ |
+| 9 | Plugins & Marketplace | ✅ |
+| 10 | Headless / SDK / CI | ◐ (CI workflow added) |
+| 11 | Capstone & Publishing | ⏳ in progress |

@@ -6,9 +6,9 @@ is a top-level function/class, or a method defined directly inside a class.
 from __future__ import annotations
 
 import ast
+from collections.abc import Iterator
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Iterator
 
 # Directories we never want to walk into when scanning a tree.
 _SKIP_DIRS = {".venv", "venv", "build", "dist", "__pycache__", ".git"}
